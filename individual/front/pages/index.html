@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GearUp - Marketplace</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="logo">
+            <img src="../src/logo.png" alt="GR" height="100%">
+        </div>
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#cadastrar">Cadastrar veículo</a>
+            <a href="#destaques">Veiculos</a>
+            <a href="">Explorar</a>
+        </div>
+    </div>
+    <section id="home">
+        <div class="banner">
+            <div class="texto-banner">
+                <h1>Encontre seu próximo carro.</h1>
+                <h3>Pesquise entre os veículos cadastrados no GearUp.</h3>
+            </div>
+        </div>
+    </section>
+    <section id="cadastrar">
+        <div class="cadastrar">
+            <h2>Cadastrar veículo</h2>
+            <div class="form">
+                <div class="cad infor-basicas">
+                    <div class="desc">
+                        <h4>Informações do Veículo</h4>
+                        <h5>Dados básicos</h5>
+                    </div>
+
+                    <div class="forms">
+                        <label class="w-33">
+                            <span>Marca</span>
+                            <input type="text" id="ipt_marca" placeholder="Ex: Ferrari">
+                        </label>
+
+                        <label class="w-33">
+                            <span>Modelo</span>
+                            <input type="text" id="ipt_modelo" placeholder="Ex: 296 GTB">
+                        </label>
+
+                        <label class="w-33">
+                            <span>Ano</span>
+                            <input type="date" min="1900" max="2026" id="ipt_ano" placeholder="Ex: 2022">
+                        </label>
+
+                        <label class="w-33">
+                            <span>Cor</span>
+                            <input type="text" id="ipt_cor" placeholder="Ex: Vermelho">
+                        </label>
+
+                        <label class="w-33">
+                            <span>Quilometragem</span>
+                            <input type="number" min="0" id="ipt_km" placeholder="Ex: 30.000">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="cad infor-caracteristicas">
+                    <div class="desc">
+                        <h4>Características</h4>
+                        <h5>Especificações sobre o veículo</h5>
+                    </div>
+
+                    <div class="forms">
+                        <label class="w-25">
+                            Tipo do veículo
+                            <select id="slt_tipo">
+                                <option value="#" disabled selected> SELECIONAR </option>
+                                <!-- <option value="Hatch">Hatch</option>
+                                <option value="Sedan">Sedan</option>
+                                <option value="SUV">SUV</option>
+                                <option value="Pickup">Pickup</option>
+                                <option value="Esportivo">Esportivo</option>
+                                <option value="Conversível">Conversível</option> -->
+                            </select>
+                        </label>
+
+                        <label class="w-25">
+                            Combustível
+                            <select id="slt_combustivel">
+                                <option value="#" disabled selected> SELECIONAR </option>
+                                <option value="Gasolina">Gasolina</option>
+                                <option value="Etanol">Etanol</option>
+                                <option value="Flex">Flex</option>
+                                <option value="Diesel">Diesel</option>
+                                <option value="Elétrico">Elétrico</option>
+                                <option value="Híbrido">Híbrido</option>
+                            </select>
+                        </label>
+
+                        <label class="w-25">
+                            Câmbio
+                            <select id="slt_cambio">
+                                <option value="#" disabled selected> SELECIONAR </option>
+                                <option value="Manual">Manual</option>
+                                <option value="Automático">Automático</option>
+                            </select>
+                        </label>
+
+                        <label class="w-25">
+                            Número de portas
+                            <select id="slt_portas">
+                                <option value="#" disabled selected> SELECIONAR </option>
+                                <option value="2">2 portas</option>
+                                <option value="3">3 portas</option>
+                                <option value="4">4 portas</option>
+                                <option value="5">5 portas</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="cad infor-comerciais">
+                    <div class="desc">
+                        <h4>Informações comerciais</h4>
+                        <h5>Informações de venda e impulsionar_anuncio</h5>
+                    </div>
+
+                    <div class="forms">
+                        <label class="w-50">
+                            Preço
+                            <input type="number" min="0" id="ipt_preco" placeholder="Ex: 125000">
+                        </label>
+
+                        <label class="w-25">
+                            Estado do veículo
+                            <div class="label-select">
+                                <label class="label-select">
+                                    <input type="radio" id="ipt_radio_novo" name="estado" value="Novo" checked>
+                                    Novo
+                                </label>
+
+                                <label class="label-select">
+                                    <input type="radio" id="ipt_radio_seminovo" name="estado" value="Seminovo">
+                                    Seminovo
+                                </label>
+
+                                <label class="label-select">
+                                    <input type="radio" id="ipt_radio_usado" name="estado" value="Usado">
+                                    Usado
+                                </label>
+                            </div>
+                        </label>
+
+                        <label class="w-25">
+                            Impulsionar Anúncio
+                            <div class="label-select">
+                                <label class="label-select">
+                                    <input type="radio" id="ipt_radio_disponivel" name="impulsionar_anuncio"
+                                        value="True" checked>
+                                    Sim (Taxa adicional) 
+                                </label>
+
+                                <label class="label-select">
+                                    <input type="radio" id="ipt_radio_indisponivel" name="impulsionar_anuncio"
+                                        value="False">
+                                    Não
+                                </label>
+                            </div>
+                        </label>
+                        <label class="w-75">
+                            Email de contaro
+                            <input type="text" id="ipt_email" placeholder="Ex: ferrari@gmail.com">
+                        </label>
+                        <label class="w-25">
+                            Número de contaro
+                            <input type="text" id="ipt_numero" placeholder="Ex: (11) 99999-9999">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="cad infor-add">
+                    <div class="desc">
+                        <h4>Informações adicionais</h4>
+                        <h5>Itens e configurações do veículo</h5>
+                    </div>
+
+                    <div class="forms">
+                        <label class="w-100">
+                            Opções
+                            <div class="label-select">
+                                <label class="label-select">
+                                    <input type="checkbox" id="ipt_check_ar_condicionado" name="opcoes"
+                                        value="Ar-condicionado">
+                                    Ar-condicionado
+                                </label>
+
+                                <label class="label-select">
+                                    <input type="checkbox" id="ipt_check_direcao_eletrica" name="opcoes"
+                                        value="Direção elétrica">
+                                    Direção elétrica
+                                </label>
+
+                                <label class="label-select">
+                                    <input type="checkbox" id="ipt_check_vidros_eletricos" name="opcoes"
+                                        value="Vidros elétricos">
+                                    Vidros elétricos
+                                </label>
+
+                                <label class="label-select">
+                                    <input type="checkbox" id="ipt_check_travas_eletricas" name="opcoes"
+                                        value="Travas elétricas">
+                                    Travas elétricas
+                                </label>
+
+                                <label class="label-select">
+                                    <input type="checkbox" id="ipt_check_central_multimidia" name="opcoes"
+                                        value="Central multimídia">
+                                    Central multimídia
+                                </label>
+
+                                <label class="label-select">
+                                    <input type="checkbox" id="ipt_check_camera_re" name="opcoes" value="Câmera de ré">
+                                    Câmera de ré
+                                </label>
+
+                                <label class="label-select">
+                                    <input type="checkbox" id="ipt_check_sensor_estacionamento" name="opcoes"
+                                        value="Sensor de estacionamento">
+                                    Sensor de estacionamento
+                                </label>
+
+                                <label class="label-select">
+                                    <input type="checkbox" id="ipt_check_teto_solar" name="opcoes" value="Teto solar">
+                                    Teto solar
+                                </label>
+
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="divulgar">
+                    <button class="btn-cancelar">Cancelar</button>
+                    <button class="btn-divulgar" onclick="cadastrar()">Divulgar Anúncio</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="destaques">
+        <div class="destaques">
+            <h2>Veículos em destaque</h2>
+            <div class="area-destaques" id="anuncios-veiculos">
+            </div>
+        </div>
+    </section>
+    <div class="popup" id="ofeta-veiculo">
+
+    </div>
+</body>
+
+</html>
+<script>
+
+    document.getElementById('ipt_ano').max = new Date().toISOString().split("T")[0]
+
+    function cadastrar() {
+
+        var var_marca = document.getElementById('ipt_marca').value
+        var var_modelo = document.getElementById('ipt_modelo').value
+        var var_ano = document.getElementById('ipt_ano').value
+        var var_cor = document.getElementById('ipt_cor').value
+        var var_km = document.getElementById('ipt_km').value
+
+        var var_tipo = document.getElementById('slt_tipo').value
+        var var_combustivel = document.getElementById('slt_combustivel').value
+        var var_cambio = document.getElementById('slt_cambio').value
+        var var_portas = document.getElementById('slt_portas').value
+
+        var var_preco = document.getElementById('ipt_preco').value
+        var var_estado = document.querySelector('input[name="estado"]:checked').value
+        var var_impulsionar_anuncio = document.querySelector('input[name="impulsionar_anuncio"]:checked').value
+        var var_email = document.getElementById('ipt_email').value
+        var var_numero = document.getElementById('ipt_numero').value.replaceAll(' ', '')
+            .replace('(', '').replace(')', '').replace('-', '')
+
+        var opcoesSelecionadas = document.querySelectorAll('input[name="opcoes"]:checked');
+        var var_opcoes = Array.from(opcoesSelecionadas)
+            .map(opcao => opcao.value)
+            .join(', ');
+
+        console.log("marca: " + var_marca)
+        console.log("modelo: " + var_modelo)
+        console.log("ano: " + var_ano)
+        console.log("cor: " + var_cor)
+        console.log("km: " + var_km)
+        console.log("tipo: " + var_tipo)
+        console.log("combustivel: " + var_combustivel)
+        console.log("cambio: " + var_cambio)
+        console.log("portas: " + var_portas)
+        console.log("preco: " + var_preco)
+        console.log("estado: " + var_estado)
+        console.log("impulsionar_anuncio: " + var_impulsionar_anuncio)
+        console.log("email: " + var_email)
+        console.log("numero: " + var_numero)
+        console.log("opcoes: " + var_opcoes)
+
+        if (
+            var_marca == '' ||
+            var_modelo == '' ||
+            var_ano == '' ||
+            var_cor == '' ||
+            var_km == ''
+        ) {
+            alert('Preencha todos os campos de: \nInformações do Veículo')
+        } else if (
+            var_tipo == '#' ||
+            var_combustivel == '#' ||
+            var_cambio == '#' ||
+            var_portas == '#'
+        ) {
+            alert('Preencha todos os campos de: \nCaracterísticas')
+        } else if (
+            !var_email.includes('@')
+        ) {
+            alert('Email de contato deve contar "@"')
+        } else if (
+            var_preco == '' || var_preco == null ||
+            var_estado == '' || var_estado == null ||
+            var_impulsionar_anuncio == '' || var_impulsionar_anuncio == null ||
+            var_email == '' || var_email == null ||
+            var_numero == '' || var_numero == null
+        ) {
+            alert('Preencha todos os campos de: \nInformações Adicionais')
+        } else {
+            fetch("http://localhost:8080/veiculos", {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify({
+                    marca: var_marca,
+                    modelo: var_modelo,
+                    ano: var_ano,
+                    cor: var_cor,
+                    quilometragem: var_km,
+                    tipoVeiculo: var_tipo,
+                    tipoCombustivel: var_combustivel,
+                    tipoCambio: var_cambio,
+                    qtdPorta: var_portas,
+                    preco: var_preco,
+                    estadoVeiculo: var_estado,
+                    impulsionarAnuncio: var_impulsionar_anuncio,
+                    emailContato: var_email,
+                    numeroContato: var_numero,
+                    infosAdd: var_opcoes
+                })
+            })
+                .then(function (resposta) {
+                    console.log("resposta: ", resposta);
+
+                    if (resposta.ok) {
+                        alert('Anuncio Cadastrado Com Sucesso!')
+                        buscarVeiculos()
+                    } else {
+                        throw "Houve um erro ao tentar realizar o cadastro do anuncio!";
+                    }
+                })
+                .catch(function (resposta) {
+                    console.log(`#ERRO: ${resposta}`);
+                });
+
+        }
+    }
+
+    function buscarTiposVeiculos() {
+        fetch("http://localhost:8080/tiposVeiculos", { cache: 'no-store' })
+            .then(function (response) {
+                response.json().then(function (resposta) {
+                    var select = "";
+                    for (var i = 0; i < resposta.length; i++) {
+                        select += `<option value="${resposta[i].id}">${resposta[i].tipoVeiculo}</option>`
+                    }
+
+                    document.getElementById('slt_tipo').innerHTML += select
+                })
+            })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ feed: ${error.message}`)
+            })
+    }
+
+    function buscarVeiculos() {
+        fetch("http://localhost:8080/veiculos", { cache: 'no-store' })
+            .then(function (response) {
+                response.json().then(function (resposta) {
+                    var card_anuncios = ""
+                    for (var i = 0; i < resposta.length; i++) {
+                        var veiculo = resposta[i]
+                        var ano = new Date(veiculo.ano).getFullYear()
+                        card_anuncios += `
+                         <div class="card-destaque">
+                            <div class="img">
+                                <img src="" alt="carro">
+                            </div>
+                            <div class="infos">
+                                <span class="nome">${veiculo.modelo} ${ano} - ${veiculo.marca}</span>
+                                <span class="infos-gerais">${veiculo.cor} | ${veiculo.quilometragem}KM | ${veiculo.tipoVeiculo} | ${veiculo.tipoCombustivel}</span>
+                                <span class="valor">R$ ${veiculo.preco.toFixed(2)}</span>
+                                <span class="infos-gerais">Contato: ${veiculo.numeroContato}</span>
+                                <button onclick="verOferta(${veiculo.id})">Ver Oferta</button>
+                            </div>
+                        </div>
+                        `
+                    }
+                    document.getElementById('anuncios-veiculos').innerHTML = card_anuncios
+                })
+            })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ feed: ${error.message}`)
+            })
+    }
+
+    function verOferta(id) {
+        fetch(`http://localhost:8080/veiculos/${id}`, { cache: 'no-store' })
+            .then(function (response) {
+                response.json().then(function (resposta) {
+                    var veiculo = resposta
+                    abrir()
+                    var ano = new Date(veiculo.ano).getFullYear()
+                    var popup = document.getElementById("ofeta-veiculo")
+                    var popupEstrutura = `
+                    <div class="popup-conteudo">
+                        <button class="btn-fechar" onclick="fechar()">×</button>
+                        <!-- Cabeçalho -->
+                        <div class="popup-header">
+                            <div class="titulo-veiculo">
+                                <span class="pop-marca">${veiculo.marca}</span>
+                                <span class="pop-modelo">${veiculo.modelo}</span>
+                            </div>
+
+                            <span class="pop-ano">${ano}</span>
+                        </div>
+
+                            <div class="info-principal-test">
+                            <div class="info-item">
+                                <span>Quilometragem</span>
+                                <strong>${veiculo.quilometragem}</strong>
+                            </div>
+
+                            <div class="info-item">
+                                <span>Câmbio</span>
+                                <strong>${veiculo.tipoCambio}</strong>
+                            </div>
+
+                            <div class="info-item">
+                                <span>Combustível</span>
+                                <strong>${veiculo.tipoCombustivel}</strong>
+                            </div>
+
+                            <div class="info-item">
+                                <span>Carroceria</span>
+                                <strong>${veiculo.tipoVeiculo}</strong>
+                            </div>
+
+
+                        </div>
+
+                        <div class="preco-area">
+                            <span>Por apenas</span>
+                            <strong>R$ ${veiculo.preco.toFixed(2)}</strong>
+                        </div>
+
+                        <div class="detalhes">
+                            <h3>Detalhes do veículo</h3>
+                            <div class="ficha-tecnica">
+                                <div>
+                                    <span>Marca</span>
+                                    <strong>${veiculo.marca}</strong>
+                                </div>
+                                <div>
+                                    <span>Modelo</span>
+                                    <strong>${veiculo.modelo}</strong>
+                                </div>
+                                <div>
+                                    <span>Ano</span>
+                                    <strong>${ano}</strong>
+                                </div>
+                                <div>
+                                    <span>Cor</span>
+                                    <strong>${veiculo.cor}</strong>
+                                </div>
+                                <div>
+                                    <span>Portas</span>
+                                    <strong>${veiculo.qtdPorta}</strong>
+                                </div>
+                                <div>
+                                    <span>Estado</span>
+                                    <strong>${veiculo.estadoVeiculo}</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Informações adicionais -->
+                        <div class="observacoes">
+
+                            <h3>Informações adicionais</h3>
+                            <p>
+                                ${veiculo.infosAdd}
+                            </p>
+                        </div>
+
+                        <!-- Contato -->
+                        <div class="contato">
+                            <h3>Entre em contato com o vendedor</h3>
+                            <div class="contato-info">
+                                <span>📧 ${veiculo.emailContato}</span>
+                                <span>📱 ${veiculo.numeroContato}</span>
+                            </div>
+                            <button class="btn-contato" onclick="interesse()">
+                                Tenho interesse
+                            </button>
+                        </div>
+                    </div>
+                    `
+                    popup.innerHTML = popupEstrutura
+
+                })
+            })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ feed: ${error.message}`)
+            })
+    }
+
+    function abrir() {
+        var popup = document.getElementById("ofeta-veiculo");
+        popup.classList.add("aberto");
+        document.body.classList.add("popup-aberto");
+    }
+    function fechar() {
+        const popup = document.getElementById("ofeta-veiculo");
+        popup.classList.remove("aberto");
+        document.body.classList.remove("popup-aberto");
+    }
+
+    function interesse() {
+        alert("Encontramos um erro 😒 \nMas já estamos trabalhando para resolver 🛠️")
+        fechar()
+    }
+
+    buscarVeiculos()
+    buscarTiposVeiculos()
+
+</script>

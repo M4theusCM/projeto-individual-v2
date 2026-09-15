@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Chewy&family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --cinza-color: #363636;
+    --cinza-claro-1: #D9D9D9;
+    --cinza-claro-2: #7A7A7A;
+    --cinza-medio: #4F4F4F;
+    --cinza-escuro-1: #202223;
+    --cinza-escuro-2: #151617;
+    --cinza-escuro-nav: #303030;
+    --laranja: #fe9c0f;
+    --fonte-figtree: "Figtree", sans-serif;
+    --fonte-bebas: "Bebas Neue", sans-serif;
+    --fonte-anton: "Anton", sans-serif;
+}
+
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fonte-figtree);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fonte-bebas);
+    color: var(--cinza-escuro-1);
+    margin: 0 4vw;
+}
+
+h4,
+h5,
+h6 {
+    font-family: var(--fonte-figtree);
+    color: var(--cinza-color);
+}
+
+
+
+.w-25 {
+    width: 24%;
+}
+
+.w-33 {
+    width: 32.5%;
+}
+
+.w-50 {
+    width: 49.5%;
+}
+
+.w-75 {
+    width: 74.5%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+
+
+section {
+    width: 100%;
+    height: 100vh;
+    scroll-margin-top: 75px;
+}
+
+#cadastrar {
+    height: 115vh;
+    padding-bottom: 5vh;
+}
+
+
+
+.nav-bar {
+    width: 100%;
+    height: 75px;
+    padding: 10px 30px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: var(--cinza-escuro-nav);
+    font-family: var(--fonte-figtree);
+}
+
+.nav-bar .logo {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    padding: 0 75px;
+}
+
+.nav-bar .links {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: 0.2s;
+}
+
+.nav-bar .links a:hover {
+    color: var(--cinza-claro-1);
+}
+
+
+
+.banner {
+    width: 100%;
+    height: 100%;
+    background-image: url('../src/gearup - efeito-claro.png');
+    background-size: 1100px;
+    background-repeat: no-repeat;
+    background-position: -1.9vw 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.texto-banner {
+    margin-top: 25vh;
+}
+
+.texto-banner h1 {
+    font-size: 60px;
+}
+
+.texto-banner h3 {
+    font-size: 40px;
+}
+
+
+
+.destaques {
+    width: 100%;
+    height: 100%;
+    padding: 3vh 2vw;
+}
+
+.destaques h2,
+.cadastrar h2 {
+    font-size: 35px;
+}
+
+.area-destaques {
+    margin-top: 2vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+
+
+.card-destaque {
+    height: 406px;
+    width: 242px;
+    border-radius: 5px;
+    background-color: var(--cinza-claro-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1vh 1vw;
+}
+
+.card-destaque .img {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-destaque img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.card-destaque .infos {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 10px;
+    font-family: var(--fonte-figtree);
+}
+
+.card-destaque .nome,
+.card-destaque .valor {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.card-destaque .infos-gerais {
+    font-size: 14px;
+}
+
+.card-destaque button {
+    height: 40px;
+    background-color: var(--cinza-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+
+.card-destaque button:hover {
+    background-color: var(--cinza-medio);
+}
+
+
+
+.cadastrar {
+    height: 100%;
+    padding: 2vh 3vw;
+}
+
+.form {
+    width: 100%;
+    min-height: 50%;
+    margin: 3vh 0;
+    padding: 0 4vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.form .cad {
+    width: 100%;
+    height: auto;
+    padding: 2vh 30px;
+    border: solid 2px var(--cinza-claro-1);
+    border-radius: 10px;
+    margin-bottom: 2vh;
+    box-shadow: 0 0 5px var(--cinza-claro-1);
+    display: flex;
+    flex-direction: column;
+}
+
+.form .cad .desc {
+    background-color: var(--cinza-claro-1);
+    max-width: 300px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 2vh;
+}
+
+.form .cad .forms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw 1vw;
+}
+
+.form .cad label {
+    font-family: var(--fonte-figtree);
+    color: var(--cinza-claro-2);
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+}
+
+.form .cad label>input,
+.form .cad label>select {
+    border: solid 1px var(--cinza-claro-1);
+    border-radius: 5px;
+    height: 30px;
+    padding: 0 5px;
+    font-weight: 600;
+    color: var(--cinza-color);
+}
+
+.form .cad .label-select {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+}
+
+.form .divulgar {
+    display: flex;
+    justify-content: end;
+    gap: 1vw;
+}
+
+.form .btn-divulgar {
+    width: 150px;
+    height: 40px;
+    background-color: var(--cinza-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+
+.form .btn-divulgar:hover {
+    background-color: var(--cinza-medio);
+}
+
+.form .btn-cancelar {
+    width: 110px;
+    height: 40px;
+    border: solid 2px var(--cinza-claro-2);
+    color: var(--cinza-claro-2);
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+
+.form .btn-cancelar:hover {
+    background-color: var(--cinza-claro-1);
+}
+
+
+
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(2, 2, 2, 0.35);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.popup.aberto {
+    display: flex;
+}
+
+
+
+.popup-conteudo {
+    position: relative;
+    width: 800px;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 30px;
+    background-color: white;
+    border: solid 1px var(--cinza-claro-1);
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: var(--fonte-figtree);
+}
+
+
+
+.btn-fechar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    line-height: 30px;
+    color: var(--cinza-medio);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-fechar:hover {
+    color: var(--cinza-escuro-1);
+    transform: scale(1.1);
+}
+
+
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--cinza-claro-1);
+}
+
+.titulo-veiculo {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.pop-marca {
+    font-size: 20px;
+    color: var(--cinza-claro-2);
+    font-weight: 600;
+}
+
+.pop-modelo {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--cinza-escuro-1);
+}
+
+.pop-ano {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--cinza-medio);
+}
+
+.info-principal-test {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    background-color: rgb(194, 27, 27);
+}
+
+.info-item {
+    min-height: 80px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+
+    border-right: 1px solid #D9D9D9;
+    background-color: white;
+}
+
+.info-item:last-child {
+    border-right: none;
+}
+
+.info-item span {
+    display: block;
+    font-family: "Figtree", sans-serif;
+    font-size: 13px;
+    color: #7A7A7A;
+}
+
+.info-item strong {
+    display: block;
+    font-family: "Figtree", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #363636;
+}
+
+
+.preco-area {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.preco-area span {
+    font-size: 14px;
+    color: var(--cinza-claro-2);
+}
+
+.preco-area strong {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--laranja);
+}
+
+.detalhes h3,
+.observacoes h3,
+.contato h3 {
+    margin: 0 0 15px 0;
+    font-family: var(--fonte-figtree);
+    font-size: 20px;
+    color: var(--cinza-escuro-1);
+}
+
+.ficha-tecnica {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--cinza-claro-1);
+    border-left: 1px solid var(--cinza-claro-1);
+}
+
+.ficha-tecnica div {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-right: 1px solid var(--cinza-claro-1);
+    border-bottom: 1px solid var(--cinza-claro-1);
+}
+
+.ficha-tecnica span {
+    font-size: 13px;
+    color: var(--cinza-claro-2);
+}
+
+.ficha-tecnica strong {
+    font-size: 15px;
+    color: var(--cinza-color);
+}
+
+.observacoes {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+.observacoes h3 {
+    margin-bottom: 10px;
+}
+
+.observacoes p {
+    font-size: 15px;
+    color: var(--cinza-medio);
+    line-height: 1.5;
+}
+
+.contato {
+    padding: 20px;
+    border: 1px solid var(--cinza-claro-1);
+    border-radius: 8px;
+}
+
+.contato-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 25px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: var(--cinza-medio);
+}
+
+.btn-contato {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--laranja);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-contato:hover {
+    filter: brightness(0.9);
+}
+
+
+
+body.popup-aberto {
+    overflow: hidden;
+}
+
